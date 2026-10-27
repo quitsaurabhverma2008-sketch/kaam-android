@@ -410,7 +410,7 @@ public class MainActivity extends Activity {
 
         emptyView.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
-        listView.setEmptyView(emptyView);
+        emptyView.setVisibility(View.GONE);
         return emptyView;
     }
 
@@ -418,7 +418,12 @@ public class MainActivity extends Activity {
 
     private void refresh() {
         String today = TaskMath.todayKey();
-        adapter.setItems(TaskMath.sorted(TaskMath.filter(tasks, filter, today)));
+        List<Task> visible = TaskMath.sorted(TaskMath.filter(tasks, filter, today));
+        adapter.setItems(visible);
+
+        boolean isEmpty = visible.isEmpty();
+        listView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
+        emptyView.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
 
         TaskMath.Stats stats = TaskMath.stats(tasks, today);
         int streak = TaskMath.streak(tasks, today);
