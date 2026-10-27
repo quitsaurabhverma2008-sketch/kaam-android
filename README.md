@@ -3,7 +3,9 @@
 **Real native Android app** (Java) — no WebView, no React Native, no Cordova, no web wrapper.
 Offline task tracker: *"Aaj ka kaam, aaj hi."*
 
-**⬇️ Download APK:** https://github.com/quitsaurabhverma2008-sketch/kaam-android/releases/latest/download/kaam-v1.0.apk
+**⬇️ Download APK:** https://github.com/quitsaurabhverma2008-sketch/kaam-android/releases/download/v1.0/kaam-v1.0.apk?download=1
+
+**Release page:** https://github.com/quitsaurabhverma2008-sketch/kaam-android/releases/tag/v1.0
 
 **Size:** ~58 KB · **Min:** Android 5.0 (API 21) · **Target:** Android 14 (API 34) · **No INTERNET permission**
 
