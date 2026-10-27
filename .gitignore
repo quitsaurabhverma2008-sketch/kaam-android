@@ -1,0 +1,6 @@
+build/
+node_modules/
+keystore.jks
+keystore.properties
+*.log
+.DS_Store
